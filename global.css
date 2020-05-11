@@ -1,0 +1,59 @@
+/* main css */
+
+*
+{
+	background-color: black;
+	color: #28dd18;
+	font-family:courier;
+	list-style-type: square;
+	font-size: medium;
+}
+
+h1
+{
+	font-size: x-large;
+}
+
+button
+{
+	border: 0.1em solid #28dd18;
+	box-shadow: 0.1em 0.1em #999;
+	border-style: none none none solid;
+	color: #28dd18;
+	padding: 0.5em;
+	margin-bottom: 0.2em;
+}
+
+button:hover
+{
+	background: #646464;
+}
+
+button:active
+{
+	box-shadow: 0.1em 0.1em #666;
+}
+
+ul
+{
+	padding: 0.5em;
+}
+
+table, th, td
+{
+	padding: 0.1em;
+	text-align: left;
+}
+
+tr
+{
+	border-bottom: 1px solid green
+}
+
+td, th
+{
+	padding-right: 0.3em;
+	border-width: 0px;
+	border-color: green;
+	border-style: ridge;
+}
