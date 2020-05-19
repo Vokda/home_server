@@ -15,12 +15,12 @@ $sub_dir =  $_GET['sub_dir']
 			<th>Size <small>(bytes)</small></th>
 			<th>Last Modified</th>
 		</tr>
-<?php
-$files = get_files($sub_dir);
-for($i = 0; $i < count($files); $i++)
-{
-	print_file($files[$i]);
-}
-?>
+		<?php
+			$files = get_files($sub_dir);
+			for($i = 0; $i < count($files); $i++)
+			{
+				print_file($files[$i]);
+			}
+		?>
 	</table>
 </body>

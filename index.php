@@ -45,7 +45,7 @@
 			make_button('My Projects', 'https://github.com/Vokda', true),
 			make_button('Forum', 'forum.php', false),
 			make_button('Linkedin','https://www.linkedin.com/in/daniel-johansson-883b3666/', true),
-			make_button('Gallery', 'gallery.html', false),
+			make_button('Gallery', 'gallery/gallery.php', false),
 			make_button('Writings', 'writings.php', false),
 			make_button('Contact', 'contact.html', false)
 		);

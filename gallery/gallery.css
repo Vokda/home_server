@@ -1,0 +1,29 @@
+/*div.gallery{
+	float: center;
+	margin: 5px;
+	border: 1px solid #ccc;
+	width: 1001px;
+}
+
+div.gallery img{
+	align: center;
+	width: 1000px;
+	height: auto;
+}*/
+
+div.desc{
+	text-align: center;
+}
+
+div.overview_img
+{
+	float: left;
+	width: 10%;
+	padding: 0.5em;
+	height: auto;
+}
+
+div.overview_img img
+{
+	width: 100%;
+}
