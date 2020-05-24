@@ -1,5 +1,8 @@
+<?php
+$cwd = getcwd();
+include "$cwd/templates/head.html";
+?>
 <body>
-	<link href='global.css' rel='stylesheet' media='all'/>
 	<h1>Contact</h1>
 	<p>
 	<table>
@@ -9,4 +12,7 @@
 
 	</p>
 </body>
-
+<?php
+$cwd = getcwd();
+include "$cwd/templates/footer.html";
+?>

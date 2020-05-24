@@ -1,0 +1,1 @@
+desc=Terrain generated with my <a href="https://github.com/Vokda/sc4_region_generator">Simcity4 terrain generator</a>.

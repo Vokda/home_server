@@ -1,22 +1,14 @@
-/*div.gallery{
-	float: center;
-	margin: 5px;
-	border: 1px solid #ccc;
-	width: 1001px;
-}
-
-div.gallery img{
-	align: center;
-	width: 1000px;
-	height: auto;
-}*/
-
 div.desc{
 	text-align: center;
 }
 
+div.overview
+{
+}
+
 div.overview_img
 {
+	width: 100%;
 	float: left;
 	width: 10%;
 	padding: 0.5em;
@@ -25,5 +17,30 @@ div.overview_img
 
 div.overview_img img
 {
-	width: 100%;
+	width: 10em;
+	opacity: 0.8;
+	margin: 0.2em;
+}
+
+div.overview_img img:hover
+{
+	transform: scale(1.1);
+}
+
+div.footer
+{
+	position: absolute;
+}
+
+.container
+{
+	float: left;
+	position: relative;
+	max-width: 100%;
+}
+
+.container img
+{
+	max-width: 100%;
+	margin: auto;
 }

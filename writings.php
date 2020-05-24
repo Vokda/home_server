@@ -1,5 +1,6 @@
 <link href='global.css' rel='stylesheet' media='all'/>
-<?php include 'dir_handler.php' ?>
+<?php 
+include 'utils/dir_handler.php' ?>
 <body>
 	<h1> Writings </h1>
 	<p>
@@ -24,4 +25,7 @@
 	}
 ?>
 	</table>
+<?php
+	include 'templates/footer.html'
+?>
 </body>

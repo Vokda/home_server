@@ -1,5 +1,6 @@
-<link href='global.css' rel='stylesheet' media='all'/>
-<meta charset="utf-8"/>
+<?php
+include 'templates/head.html';
+?>
 <h1>About Me</h1>
 <div >
 	<p>
@@ -76,3 +77,4 @@ print_ul($dislikes);
 My CV can be found <a href="writings/CV.pdf">here</a>.
 </p>
 </div>
+<?php include 'templates/footer.html' ?>

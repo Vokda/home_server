@@ -3,30 +3,10 @@
 	<head>
 		<meta charset="utf-8"/>
 		<link href='global.css' rel='stylesheet' media='all'/>
-		<script>
-			function open_tab(link){
-					window.open(link, '_blank');
-			}
-		</script>
 	  </head>
 	<body id=body>
 	<?php
-	function make_button($name, $href, $new_tab){
-		if($new_tab)
-		{
-			$button =  htmlspecialchars(
-				"<button onclick=\"open_tab('$href', $new_tab)\">$name</button>"
-			);
-		}
-		else
-		{
-
-			$button =  htmlspecialchars(
-				"<button onclick=\"location.href='$href'\">$name</button>"
-			);
-		}
-		return $button;
-	}
+	require 'utils/buttoner.php';
 	?>
 	<h1>/home/daniel_johansson/website</h1>
 	<div>
@@ -42,22 +22,16 @@
 		$items = array(
 			make_button('About Me', 'about_me.php', false),
 			make_button('lsjbot.se', 'http://lsjbot.se', true),
-			make_button('My Projects', 'https://github.com/Vokda', true),
+			make_button('My Projects', 'projects/top.php', false),
+			make_button('Sevices', 'services/top.php', false),
 			make_button('Forum', 'forum.php', false),
 			make_button('Linkedin','https://www.linkedin.com/in/daniel-johansson-883b3666/', true),
 			make_button('Gallery', 'gallery/gallery.php', false),
 			make_button('Writings', 'writings.php', false),
-			make_button('Contact', 'contact.html', false)
+			make_button('Contact', 'contact.php', false)
 		);
 
-	echo "<ul>";
-	for ($x = 0; $x < count($items); $x++)
-	{
-		echo '<li>';
-		echo htmlspecialchars_decode($items[$x]);
-		echo '</li>';
-	}
-	echo '</ul>';
+		make_button_list($items);
 	?>
   </p>
   </body>

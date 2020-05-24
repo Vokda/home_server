@@ -1,2 +1,1 @@
-desc "A swan sitting on its eggs"
-alt "A swan sitting on its eggs"
+desc=A swan sitting on its eggs.

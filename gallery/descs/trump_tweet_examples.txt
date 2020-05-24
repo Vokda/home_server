@@ -1,0 +1,2 @@
+desc=Here is a list of examples of tweets generated with a <a href="https://github.com/Vokda/trump_tweeter">markov chain based on Trump's tweets</a>.
+alt=generated trump tweets

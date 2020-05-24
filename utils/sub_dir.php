@@ -23,4 +23,8 @@ $sub_dir =  $_GET['sub_dir']
 			}
 		?>
 	</table>
+<?php
+$cwd = getcwd();
+include "$cwd/templates/footer.html";
+?>
 </body>

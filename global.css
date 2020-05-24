@@ -9,6 +9,11 @@
 	font-size: medium;
 }
 
+fieldset
+{
+	border-color: #28dd18;
+}
+
 h1
 {
 	font-size: x-large;
