@@ -1,0 +1,16 @@
+.tooltip
+{
+	text-decoration: underline;
+}
+
+.tooltip .tt_text
+{
+	visibility: hidden;
+	text-align: center;
+}
+
+.tooltip:hover .tt_text
+{
+	visibility: visible;
+	!important text-decoration: none;
+}

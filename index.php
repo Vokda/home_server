@@ -23,6 +23,7 @@
 			make_button('About Me', 'about_me.php', false),
 			make_button('lsjbot.se', 'http://lsjbot.se', true),
 			make_button('My Projects', 'projects/top.php', false),
+			make_button('Software Related', 'software/top.php', false),
 			make_button('Sevices', 'services/top.php', false),
 			make_button('Forum', 'forum.php', false),
 			make_button('Linkedin','https://www.linkedin.com/in/daniel-johansson-883b3666/', true),
