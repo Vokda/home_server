@@ -62,3 +62,8 @@ td, th
 	border-color: green;
 	border-style: ridge;
 }
+
+.content
+{
+	display: none;
+}

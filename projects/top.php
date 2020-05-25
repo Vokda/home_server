@@ -2,6 +2,7 @@
 include '../templates/head.html';
 ?>
 <body>
+<script type='text/javascript' src='/utils/collapsible.js'></script>
 <link href='projects.css' rel='stylesheet' media='all'/>
 <h1>My Projects</h1>
 <div>
@@ -17,7 +18,7 @@ Occasionally I'll discover some old code in a
 tarball 
 	<span class='tt_text'>
 		(compressed file; related funny 
-		<a href='https://imgs.xkcd.com/comics/tar.png'>picture</a>
+		<a href='https://imgs.xkcd.com/comics/tar.png'><b>picture</b></a>
 		)</span>
 </div>
 of old projects and code snippets and put it here, perhaps even upload the code.
@@ -37,15 +38,24 @@ Some of my programs are/will be available via this website <a href='../services/
 $root = $_SERVER['DOCUMENT_ROOT'];
 require "$root/utils/dir_handler.php";
 $html_files = get_files("projects");
+$i = 0;
 foreach ($html_files as &$item)
 {
 	if(strpos($item[0], 'html'))
 	{
+		$button_name = basename($item[0], '.html');
+		$button_name = preg_replace('/_/', ' ', $button_name);
+		$button_name = ucwords($button_name);
 		echo '<li>';
 		echo "<fieldset>";
+		echo "<button type='button' class='collapsible$i'";
+		echo" onclick=collapse($i)>$button_name</button>";
+		echo "<div class='content' id='content$i' style='display:none;'>";
 		include $item[0];
+		echo "</div>";
 		echo '</fieldset>';
 		echo '</li>';
+		$i++;
 	}
 }
 #include 'name_generator.html';
