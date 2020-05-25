@@ -1,6 +1,9 @@
 ---
 - hosts: rpi
   tasks:
+    - name: remove name_gen generated files
+      local_action: rm ./services/name_gen/name_generator/letter.freq
+      local_action: rm ./services/name_gen/name_generator/n2a.map
     - name: copy files
       copy:
           dest: /var/www/home_server/
