@@ -7,6 +7,7 @@
 	font-family:courier;
 	list-style-type: square;
 	font-size: medium;
+	margin-bottom: 10px;
 }
 
 fieldset
@@ -66,4 +67,22 @@ td, th
 .content
 {
 	display: none;
+}
+
+figure
+{
+	position: relative;
+	float: right;
+	border: thin solid;
+	text-align: center;
+}
+
+figure img
+{
+	display: block;
+	background: grey;
+}
+
+figcaption
+{
 }
