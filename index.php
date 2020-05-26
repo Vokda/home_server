@@ -35,5 +35,8 @@
 		make_button_list($items);
 	?>
   </p>
+<?php
+		include 'templates/footer.html';
+?>
   </body>
 </html>
