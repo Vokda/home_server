@@ -7,7 +7,7 @@
 	/*
 	 * reads $dir and returns an array with files found 
 	 * except for . and ..
-	 * format: Array([0] => $path, [1] => 'dir/value')
+	 * format: Array([0] => $path, [1] => 'dir/file')
 	 */
 	function get_files($dir)
 	{
