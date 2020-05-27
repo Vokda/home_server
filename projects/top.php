@@ -2,8 +2,6 @@
 include '../templates/head.html';
 ?>
 <body>
-<script type='text/javascript' src='/utils/collapsible.js'></script>
-<link href='projects.css' rel='stylesheet' media='all'/>
 <h1>My Projects</h1>
 <div>
 <p>
@@ -32,39 +30,12 @@ Some of my programs are/will be available via this website <a href='../services/
 <div>
 <h2>Project List</h2>
 <i style='font-size:small'>This list is incomplete; I can help by expanding it.</i>
-<ul>
 
 <?php 
 $root = $_SERVER['DOCUMENT_ROOT'];
-require "$root/utils/dir_handler.php";
-$html_files = get_files("projects");
-$i = 0;
-foreach ($html_files as &$item)
-{
-	if(strpos($item[0], 'html'))
-	{
-		$button_name = basename($item[0], '.html');
-		$button_name = preg_replace('/_/', ' ', $button_name);
-		$button_name = ucwords($button_name);
-		echo '<li>';
-		echo "<fieldset>";
-		echo "<button type='button' class='collapsible$i'";
-		echo" onclick=collapse($i)>$button_name</button>";
-		echo "<div class='content' id='content$i' style='display:none;'>";
-		include $item[0];
-		echo "</div>";
-		echo '</fieldset>';
-		echo '</li>';
-		$i++;
-	}
-}
-#include 'name_generator.html';
-?>
+require "$root/utils/topper.php";
+$html_files = make_collapsibles_from("projects/content", 'html');
 
-</ul>
-
-<?php 
-$root = $_SERVER['DOCUMENT_ROOT'];
 include "$root/templates/footer.html" 
 ?>
 
