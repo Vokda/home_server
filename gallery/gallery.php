@@ -13,8 +13,8 @@ require "$root/utils/dir_handler.php";
 <!--div class='overview'--> 
 <p>
 Click on any of the images to get a large picture.
-The layout is a bit wonky at the moment, but all images should be viewable.
 </p>
+<div class=gallery>
 <?php
 $cwd = getcwd();
 $img_files = get_files("$cwd/pics/");
@@ -46,24 +46,25 @@ foreach($img_files as $file)
 	//echo "$alt";
 	echo "onclick='expand_image(this);'";
 	echo "/img>";
+	echo "<div text-align='center'>";
 	echo $desc;
+	echo "</div>";
 
 	echo '</div>';
 }
 ?>
 <!--/div-->
+</div>
 <!-- zoomed in content -->
-<div class='container'>
-	<!-- close image -->
-	<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-	<!-- expanded image -->
-	<img id='expanded_img'>
-	<!-- image desc -->
-	<div id='img_desc'></div>
-	<div class='footer'>
+	<div class='container'>
+		<!-- close image -->
+		<span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+		<!-- expanded image -->
+		<img id='expanded_img'>
+		<!-- image desc -->
+		<div id='img_desc'></div>
+	</div>
 	<?php
 	include "$root/templates/footer.html";
 	?>
-	</div>
-</div>
 </body>

@@ -8,18 +8,19 @@ div.overview
 
 div.overview_img
 {
-	width: 100%;
+	max-width: 100%;
 	float: left;
-	width: 10%;
+	border: 1px solid green;
+	width: 90%;
 	padding: 0.5em;
 	height: auto;
+	align: center;
 }
 
 div.overview_img img
 {
-	width: 10em;
+	max-width: 100%;
 	opacity: 0.8;
-	margin: 0.2em;
 }
 
 div.overview_img img:hover
@@ -27,14 +28,8 @@ div.overview_img img:hover
 	transform: scale(1.1);
 }
 
-div.footer
-{
-	position: absolute;
-}
-
 .container
 {
-	float: left;
 	position: relative;
 	max-width: 100%;
 }
@@ -43,4 +38,23 @@ div.footer
 {
 	max-width: 100%;
 	margin: auto;
+}
+
+img.expanded_img
+{
+	position: absolute;
+}
+
+div.footer
+{
+	width: 100%;
+}
+
+div.gallery
+{
+	position: relative;
+	overflow: hidden;
+	height: auto;
+	display: grid;
+	grid-template-columns: 33% 33% 33%;
 }
