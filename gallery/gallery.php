@@ -12,7 +12,7 @@ require "$root/utils/dir_handler.php";
 
 <!--div class='overview'--> 
 <p>
-Click on any of the images to get a large picture.
+Click on any of the images to get an enlarged image at the bottom of the page.
 </p>
 <div class=gallery>
 <?php
@@ -41,14 +41,17 @@ foreach($img_files as $file)
 	$desc = $matches[1];
 
 	// actual image tag
+	echo "<figure>";
 	echo "<img";
 	echo $src;
 	//echo "$alt";
 	echo "onclick='expand_image(this);'";
 	echo "/img>";
-	echo "<div text-align='center'>";
+
+	echo "<figcaption text-align='center'>";
 	echo $desc;
-	echo "</div>";
+	echo "</figcaption>";
+	echo "</figure>";
 
 	echo '</div>';
 }

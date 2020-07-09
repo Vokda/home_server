@@ -10,9 +10,8 @@ div.overview_img
 {
 	max-width: 100%;
 	float: left;
-	border: 1px solid green;
 	width: 90%;
-	padding: 0.5em;
+	padding: 0.2em;
 	height: auto;
 	align: center;
 }
@@ -21,11 +20,12 @@ div.overview_img img
 {
 	max-width: 100%;
 	opacity: 0.8;
+	transform: scale(0.4)
 }
 
 div.overview_img img:hover
 {
-	transform: scale(1.1);
+	transform: scale(1.1)
 }
 
 .container
@@ -38,6 +38,8 @@ div.overview_img img:hover
 {
 	max-width: 100%;
 	margin: auto;
+	max-height: 50%;
+	position: center;
 }
 
 img.expanded_img
@@ -56,5 +58,6 @@ div.gallery
 	overflow: hidden;
 	height: auto;
 	display: grid;
-	grid-template-columns: 33% 33% 33%;
+	grid-template-columns: repeat( auto-fit, minmax( 20em, 1fr ) );
+	grid-template-rows: repeat( auto-fit, minmax( 10em, 1fr ) );
 }
