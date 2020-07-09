@@ -4,7 +4,7 @@
     - name: shutdown server
       service:
           name: apache2
-          state: stop
+          state: stopped
 
     - name: remove name_gen/ files
       local_action: command rm -f ./services/name_gen/name_generator/letter.freq
@@ -16,4 +16,4 @@
     - name: restart server
       service:
           name: apache2
-          state: start
+          state: started
