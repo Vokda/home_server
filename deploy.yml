@@ -18,9 +18,9 @@
           dest: "{{ base_path }}"
           src: ./
 
-    - name: run mysql files
-      script: 
-          cmd: mysql < "{{ base_path }}/configs/board_games.mysql"; mysql < "{{ base_path }}/configs/rpg.mysql"
+          #- name: run mysql files
+      #script: 
+      #       cmd: mysql < "{{ base_path }}/configs/board_games.mysql"; mysql < "{{ base_path }}/configs/rpg.mysql"
 
 
     - name: restart server
