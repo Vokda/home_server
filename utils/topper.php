@@ -30,9 +30,9 @@ function make_collapsibles_from($dir, $type = null)
 			$button_name = ucwords($button_name);
 			make_collapsible($item, $i, $button_name);
 		}
-		elseif(!isset($type))
+		elseif($type === null)
 		{
-			$button_name = preg_replace('/\..+/', '', $button_name);
+			$button_name = preg_replace('/^.+\/(.+)\..+/', '\1', $item);
 			$button_name = preg_replace('/_/', ' ', $button_name);
 			$button_name = ucwords($button_name);
 			make_collapsible($item, $i, $button_name);

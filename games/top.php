@@ -13,7 +13,7 @@ Games! All about games here! Be it board games, video games or other kinds of ga
 // do the collapsibles
 $root = $_SERVER['DOCUMENT_ROOT'];
 require "$root/utils/topper.php";
-make_collapsibles_from('games/content', 'html');
+make_collapsibles_from('games/content');
 
 include "$root/templates/footer.html" 
 ?>

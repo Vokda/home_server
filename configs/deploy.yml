@@ -1,0 +1,27 @@
+---
+
+vars:
+    base_path: /var/www/home_server/
+
+- hosts: rpi
+  tasks:
+    - name: shutdown server
+      command: sudo a2dissite 000-default.conf
+
+    - name: remove name_gen/ files
+      local_action: command rm -f "{{ base_path }}/services/name_gen/name_generator/letter.freq"
+      local_action: command rm -f "{{ base_path }}/services/name_gen/name_generator/n2a.map"
+
+
+    - name: copy files
+      copy:
+          dest: {{ base_path }}
+          src: ./
+
+    - name: run mysql files
+      script: 
+          cmd: mysql < "{{ base_path }}/configs/board_games.mysql"; mysql < "{{ base_path }}/configs/rpg.mysql"
+
+
+    - name: restart server
+      command: sudo a2ensite 000-default.conf
