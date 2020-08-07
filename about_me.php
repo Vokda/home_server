@@ -27,7 +27,10 @@ include 'templates/head.html';
 	<p>
 
 </div>
-<p>
+
+<h2>Academical Merits</h2>
+More specifically what I have stuidied can be found
+<a href="grades.php">here</a>.
 
 <h2>Programming Related</h2>
 <p>

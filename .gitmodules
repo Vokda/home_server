@@ -1,0 +1,3 @@
+[submodule "services/name_gen/name_generator"]
+	path = services/name_gen/name_generator
+	url = https://github.com/Vokda/name_generator

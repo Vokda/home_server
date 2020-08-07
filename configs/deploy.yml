@@ -1,27 +1,39 @@
 ---
 - hosts: rpi
-
-  vars:
-      base_path: /var/www/home_server/
+  vars_files:
+      - vars.yaml
 
   tasks:
+      #- name: Include variables
+
     - name: shutdown server
-      command: sudo a2dissite 000-default.conf
+      command: sudo a2dissite prod
+      become: yes
+      ignore_errors: yes
 
-    - name: remove name_gen/ files
-      local_action: command rm -f "{{ base_path }}/services/name_gen/name_generator/letter.freq"
-      local_action: command rm -f "{{ base_path }}/services/name_gen/name_generator/n2a.map"
-
+    - name: remove letter frequency (name_gen)
+      file: 
+          path: "{{ base_path }}/services/name_gen/name_generator/letter.freq"
+          state: absent
+    - name: remove map (name_gen)
+      file:
+          path: "{{ base_path }}/services/name_gen/name_generator/n2a.map"
+          state: absent
 
     - name: copy files
-      copy:
-          dest: "{{ base_path }}"
-          src: ./
+      local_action: command rsync "{{ base_path }}" -rzc --delete --chmod=ugo=rwX  --chown=www-data:www-data "{{ user }}@{{ inventory_hostname }}:{{ base_path }}"
 
     - name: run mysql files
       script: 
           cmd: mysql < "{{ base_path }}/configs/board_games.mysql"; mysql < "{{ base_path }}/configs/rpg.mysql"
+          become: yes
+      ignore_errors: yes
 
+
+    - name: enable server
+      command: sudo a2ensite prod.conf
+      become: yes
 
     - name: restart server
-      command: sudo a2ensite 000-default.conf
+      command: sudo service apache2 restart
+      become: yes

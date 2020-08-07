@@ -2,14 +2,12 @@
 $root = realpath($_SERVER['DOCUMENT_ROOT']);
 require "$root/templates/head.html";
 
-
 $fnl = $_GET['f_name_len'];
-$lnl = $_GET['l_name_len'];
 $n_n = $_GET['n_names'];
 
 chdir('name_generator/');
 
-echo "<h3> Name(s) Generated </h3>";
+echo "<h3> Item(s) Generated </h3>";
 
 for($i = 0; $i < $n_n; $i++)
 {
@@ -18,9 +16,7 @@ for($i = 0; $i < $n_n; $i++)
 		echo "Nice try.";
 		break;
 	}
-	$name = shell_exec("./generate_name.pl $fnl $lnl");
-	#$matches = [];
-	#preg_match('/name (.+) (.+)/', $name, $matches);
+	$name = shell_exec("./generate_item.sh $fnl");
 
 	echo "<p>";
 	echo $name;

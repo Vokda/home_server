@@ -7,6 +7,7 @@
 	font-family:courier;
 	list-style-type: square;
 	font-size: medium;
+	border-color: #28dd18;
 }
 
 fieldset
@@ -45,22 +46,30 @@ ul
 	padding: 0.5em;
 }
 
-table, th, td
+/* general table related */
+
+table
 {
-	padding: 0.1em;
-	text-align: left;
+	border-collapse: collapse;
+	border: thin solid;
 }
 
-tr
+tr, td, th
 {
-	border-bottom: 1px solid green
+	border-bottom: thin solid;
 }
 
-td, th
+th
 {
+	border-top: thin solid;
+}
+
+/* general table related END */
+
+.dir
+{
+	border-top: 1px solid;
 	padding-right: 0.3em;
-	border-width: 0px;
-	border-color: green;
 	border-style: ridge;
 }
 
@@ -85,4 +94,11 @@ figure img
 
 figcaption
 {
+}
+
+/* for grades. Making use of old classes present in html */
+
+.centered
+{
+	text-align: center;
 }

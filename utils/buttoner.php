@@ -47,10 +47,7 @@ function make_button_list($button_array)
 
 function make_button_grid($button_array, $max=1)
 {
-	$size = count($button_array);
-	$width = 100/min($size,$max);
-	$w_arr = array_fill(0, min($size,$max), "$width%");
-	$n_cols = 'grid-template-columns:' . join(' ', $w_arr);
+	$n_cols = 'grid-template-columns: repeat( auto-fit, minmax(20em, 1fr) );';
 	echo "<div class='button_grid' style='$n_cols'>";
 	for ($x = 0; $x < count($button_array); $x++)
 	{

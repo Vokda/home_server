@@ -21,12 +21,15 @@
 	<?php
 		$buttons = array(
 			make_button('About Me', 'about_me.php', false),
+			make_button('Academical Merits', 'grades.php', false),
+			make_button('CV', 'writings/CV.pdf', false),
 			make_button('My Projects', 'projects/top.php', false),
+			make_button('Github', 'https://github.com/Vokda', true),
 			make_button('lsjbot.se', 'http://lsjbot.se', true),
 
 			make_button('Linkedin','https://www.linkedin.com/in/daniel-johansson-883b3666/', true),
-			make_button('Sevices', 'services/top.php', false),
-			make_button('Forum', 'forum.php', false),
+			make_button('Services', 'services/top.php', false),
+			make_button('Forum', 'forum/forum.php', false),
 
 			make_button('Software Related', 'software/top.php', false),
 			make_button('Gallery', 'gallery/gallery.php', false),

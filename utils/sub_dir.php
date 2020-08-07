@@ -9,7 +9,7 @@ $sub_dir =  $_GET['sub_dir']
 	echo "<h1> $title </h1>"; 
 ?>
 
-	<table>
+	<table class='dir'>
 		<tr>
 			<th>Filename</th>
 			<th>Size <small>(bytes)</small></th>

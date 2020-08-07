@@ -10,8 +10,8 @@ include 'utils/dir_handler.php' ?>
 	I figured that rather than never showing them I'll let anyone have a look.
 	Any feedback is welcome. :)
 	</p>
-	<table>
-		<tr>
+	<table class='dir'>
+		<tr class='dir'>
 			<th>Filename</th>
 			<th>Size <small>(bytes)</small></th>
 			<th>Last Modified</th>

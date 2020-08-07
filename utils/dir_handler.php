@@ -49,7 +49,7 @@
 		//$dir_icon = '&#xf07b;';
 
 		echo "<tr>";
-		echo "<td>";
+		echo "<td style='padding-right: 2em'>";
 		if($type === 'file')
 		{
 			echo "<i class='far fa-file'></i>";
@@ -63,7 +63,7 @@
 		}
 
 		echo "$file_name</a></td>";
-		echo "<td> $size</td>";
+		echo "<td style='padding-right: 2em'>$size</td>";
 		echo "<td>$last_mod</td>";
 		echo "</tr>";
 	}
