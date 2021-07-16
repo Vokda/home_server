@@ -2,6 +2,8 @@
 My personal website. It can be enjoyed here:
 http://www.devdaniel.eu
 
+use spine
+
 For a future update:
 - I might change so that none of the content is put on git. 
   That's not the interesting part of the code after all. 

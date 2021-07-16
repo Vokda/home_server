@@ -13,8 +13,8 @@
 		<img src="asdf" alt="[At some point there will be a neat profile picture here. Until then I'll leave my face your imagination.]">
 		<p>
 			Welcome to my website! My name is Daniel. I'm <?php echo date("Y")-1990;?> years old living in Lund in the south of Sweden. 
-			I'm a programmer in search of a job, an avid Linux user and a big fan of games whether they run on a motherboard or a regular board. 
-			I'm also part-owner of lsjbot where I'm available for consulting. My CV can be found <a href="writings/CV.pdf">here</a>.
+			I'm a programmer an avid Linux user and a big fan of games whether they run on a motherboard or a regular board. 
+			I'm also part-owner of lsjbot where I'm available for consulting. Currently on assignment. My CV can be found <a href="writings/CV.pdf">here</a>.
 		</p>
 	</div>
 	<h3>Menu</h3>

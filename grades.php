@@ -1415,8 +1415,8 @@ Below are all courses I have taken through out my studies at university.
 </div>
 <p id="section1">[1] I accidentally signed up for the course. To deregister I had to
 fill out a form online. The form was messed up. E.g. e-mail expected a number. Once
-I hade filled it in to the best of my abilites, I was toled the form was wrong and
-had to redo the entire thing. At that point I was to frustrated to do it all over
+I hade filled it in to the best of my abilites, I was told the form was wrong and
+had to redo the entire thing. At that point I was too frustrated to do it all over
 again.</p>
 <?php
 						include "templates/footer.html";

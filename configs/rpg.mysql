@@ -9,7 +9,7 @@ create table if not exists role_playing_games
 	description text
 );
 
-insert into role_playing_games (name, description)
+insert ignore into role_playing_games (name, description)
 values
 ("Eon (1st, 3rd & 4th edition)", "Swedish lore heavy fantasy with lethal combat and
 magic system. Makes use of exploding dice."),
@@ -19,5 +19,6 @@ magic system. Makes use of exploding dice."),
 ("Dungeons and Dragons (3rd ed)", "DnD, the most well known RPG. I only own the Players handbook, see Spycraft."),
 ("Spycraft", "Spy RPG based on DnD 3rd Edition."),
 ("Reign Enchiridion", "Play as a character with an arbitrary amount of territory /
-wealth / soldiers. Uses One Roll Engine.")
+wealth / soldiers. Uses One Roll Engine."),
+("Microscope", "World building RPG")
 ;

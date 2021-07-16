@@ -12,16 +12,24 @@
       ignore_errors: yes
 
     - name: remove letter frequency (name_gen)
+      become: yes
       file: 
           path: "{{ base_path }}/services/name_gen/name_generator/letter.freq"
           state: absent
     - name: remove map (name_gen)
+      become: yes
       file:
           path: "{{ base_path }}/services/name_gen/name_generator/n2a.map"
           state: absent
 
-    - name: copy files
-      local_action: command rsync "{{ base_path }}" -rzc --delete --chmod=ugo=rwX  --chown=www-data:www-data "{{ user }}@{{ inventory_hostname }}:{{ base_path }}"
+    - name: sync files
+      become: yes
+      synchronize:
+        src: "{{ base_path }}"
+        dest: "{{ base_path }}"
+        rsync_opts:
+          - '--chmod=ug=rwX'
+          - '--chown=www-data:www-data'
 
     - name: run mysql files
       script: 
