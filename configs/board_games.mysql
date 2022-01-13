@@ -11,9 +11,10 @@ create table if not exists board_games
 	description text
 );
 
-insert into board_games (name, min_players, max_players, description)
+replace into board_games (name, min_players, max_players, description) 
 values
 ("Food Chain Magnate", 2, 5, "Build a fast-food chain empire. Crush your opponents with, or get crushed by, capitalism."),
+("Food Chain Magnate: Ketchup Mechanic", 2, 6, "BIGGER BETTER FASTER STRONGER FOOD CHAIN MAGNATE"),
 ("Wiz-War", 2, 4, "Wizard death match."),
 ("Three Player Chess", 3, 3, "Chess but for three players."),
 ("DOOM The Board Game (2004)", 2, 4, "E1M1"),
@@ -46,5 +47,31 @@ Kremlin wall...assuming one of the surviving gnomes ever saw them."),
 ("Memoir '44", 2, 6, "War game set in WWII. Think of it as a slightly more advanced chess. Uses Command and Colors system."),
 ("The Great War", 2, 6, "War game set in WWI. Similar to Memoir '44"),
 ("Exploding Kittens", 2, 5, "Kittens exploding."),
-("Mahjong", 2, 4, "Somewhat similar to poker but with little solid tiles instead of cards")
+("Mahjong", 2, 4, "Somewhat similar to poker but with little solid tiles instead of cards"),
+("A Distant Plain", 1, 4, "Volume III in the COIN (COunter INsurgence) series of games. A quite complex game about the situtation in Afghanistan in the early 21th century"),
+("Sushi Go Party!", 2, 8, "Make the best sushi meal!"),
+("Fief: France 1429", 3, 6, "Similar to the computer game Crusader Kings. The more hats the more points!"),
+("Fief: France 1429, expansions", 3, 6, "Crusades, knight templars, character traits, teutonic knights and more hats!"),
+("Versailles 1919", 1, 4, "Sign the treaty of versailes after the great war as one of 4 powers."),
+("Kanban", 2, 4, "Make cars, get a promotion."),
+("Xia", 1, 6, "Like freelancer the board game. Pew, pew!"),
+("Tank Duel", 1, 8, "Surprisingly easy yet detailed game about tank combat."),
+("1862", 1, 8, "Play with stocks and railroads in east england."),
+("Twilight Struggle", 1, 2, "Cold war that should stay cold."),
+("The Virgin Queen", 2, 6, "HEAVY strategy game set during the reformation. Similar to the computer game Europa universalis."),
+("Cataclysm: A second world war", 1, 7, "War game set in gues-when. Fascinating turn mechanism and nations can collapse if pushed too hard. Exception the game"),
+("Fields of Fire", 1, 1, "Squad game in WWII."),
+("Nemo's War", 1, 5, "Sail around the world as Captain Nemo. Primarily a single player game."),
+("20th Century", 3, 5, "Build a nation, advance tech but avoid pollution."),
+("Agricola", 1, 4, "Farming in medieval Europe. Life is hard but game is peaceful."),
+("A feast for Odin", 1, 4, "Peaceful vikinging and puzzle laying"),
+("Pavlovs house", 1, 3, "Defend the Stalingrad from the German invasion. Primarily a single player game."),
+("Eclipse 2nd ed.", 2, 6, "4X in space, relatively light."),
+("Terraforming Mars", 1, 5, "Terraform Mars as a corporation."),
+("Supremacy", 2, 6, "Cold war going hot! ...but not too hot or everyone loses."),
+("Bios: Origins", 2, 4, "A peculiar civ game. Hard to describe, not sure if fun or just interesting."),
+("Quadropolis", 2, 4, "A neat city builder with surprising depth."),
+("Dice Hospital", 2, 4, "Build a hospital and save patients represented by dice."),
+("Village", 2, 4, "Kill off your family members at the right time for the most points over several generations."),
+("Champions of the wild", 2, 10, "Tell the other why your animal (like a kangaroo) would win (something like paintball).")
 ;

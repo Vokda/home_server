@@ -20,8 +20,8 @@ include 'templates/head.html';
 		<li> After that I had the choice of continuing studying or finding a job. I picked studying and went on to Linköping University to pursue a masters degree. </li>
 		<li> Due to some issues I never finished my thesis and took a job instead. </li>
 		<li> My first job out of university was in Lund at Axis as a system
-			developer. After almost 2 years I quit that job and now I'm looking for
-		a new one.</li>
+			developer. After almost 2 years I quit that job. </li>
+		<li> Currently working as a consultant on lsjbot. Current assignment is on Bokus as a perl developer.</li>
 	</ul>
 	</p>
 	<p>
