@@ -29,7 +29,7 @@
 
 			make_button('Linkedin','https://www.linkedin.com/in/daniel-johansson-883b3666/', true),
 			make_button('Services', 'services/top.php', false),
-			make_button('Forum', 'forum/forum.php', false),
+			make_button('Forum', 'forum/forum.cgi', false),
 
 			make_button('Software Related', 'software/top.php', false),
 			make_button('Gallery', 'gallery/gallery.php', false),

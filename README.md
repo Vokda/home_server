@@ -2,6 +2,8 @@
 My personal website. It can be enjoyed here:
 http://www.devdaniel.eu
 
+use spine
+
 For a future update:
 - I think I'll continue working on latex->html scripts as
   I have several pages of text on the website and html is

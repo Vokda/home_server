@@ -1,0 +1,21 @@
+[% INCLUDE header.html %]
+
+[% INCLUDE thread_head.tmpl thread=thread %]
+<hr>
+
+[% FOR rep IN replies %]
+<div class=box>
+<b>[% rep.created_by %]
+[% IF rep.created_by == user %]
+ (you) 
+[% END %]
+wrote @ 
+[% rep.date %]</b> (<i>[% rep.id %]</i>)
+<p>
+	[% rep.text %]
+</p>
+</div>
+[% END %]
+[% INCLUDE reply.tmpl user=user thread=thread.0 %]
+<button onclick="location.href='/forum/forum.cgi'">Back to forum</button>
+[% INCLUDE footer.html %]

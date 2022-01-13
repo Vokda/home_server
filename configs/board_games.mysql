@@ -11,6 +11,8 @@ create table if not exists board_games
 	description text
 );
 
+truncate table board_games;
+
 replace into board_games (name, min_players, max_players, description) 
 values
 ("Food Chain Magnate", 2, 5, "Build a fast-food chain empire. Crush your opponents with, or get crushed by, capitalism."),

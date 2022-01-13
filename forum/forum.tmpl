@@ -1,0 +1,45 @@
+<meta charset="utf-8"/>
+<link href='global.css' rel='stylesheet' media='all'/>
+[% INCLUDE header.html %]
+<script src="forum.js"></script>
+<head>
+	<h1>
+		Forum
+	</h1>
+	<p>
+		This is a simple Forum. Feel free to write something.
+		Threads are removed every so often.
+		You are anonymous. Your username is [your IP] + salt (example: 135Dvjw6mgx8Y).
+		Don't post personal or insensitive stuff, please.
+	</p>
+</head>
+
+<body>
+	<div>
+		<h2>Create Thread</h2>
+		<form action="create_thread.cgi" method="post">
+			<table>
+				<tr>
+					<th><label for=subject>Subject</label></th>
+					<td><input type=text id=subject name=subject></td>
+				</tr>
+				<tr>
+					<th><label for=desc>Description</label></th>
+					<td><textarea type=text id=desc name=desc></textarea></td>
+				</tr>
+			</table>
+			<input type=submit value='Create Thread' style='margin: 1em'>
+		</form>
+	</div>
+
+
+	<hr>
+	<h2 align=center>Threads</h2> 
+	[% FOREACH t IN threads %]
+	<a href='view_thread.cgi?thread=[% t.0 %]'>
+		[% INCLUDE thread_head.tmpl thread=t %]
+	</a>
+	<hr>
+	[% END %]
+</body>
+[% INCLUDE footer.html %]

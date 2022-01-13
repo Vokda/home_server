@@ -1,0 +1,10 @@
+<div class='box'>
+	[% FOR t in thread %]
+	[% END %]
+	<table>
+		<div><b> [% thread.1 #title %] </b> <p align=right>Posted by [%thread.3%] @ [%thread.2%] </p></div>
+		<div class=box>
+			[% thread.4 %]
+		</div>
+	</table>
+</div>

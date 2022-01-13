@@ -16,6 +16,7 @@ A fun way to create stories is with the game <a href='/games/top.php#fiasco'>Fia
 <p>
 Beneath will be, one day, a list of my books; books I've read, books I recommend, books on my reading list and books I currently am reading.
 However entering the entire of my library into a database would take too much effort. I'm looking into having text-recognition algorithm looking at my books and automate the data entry. So far it's going a bit so so. 
+In the mean time have a list of some books I have enjoyed
 </p>
 </div>
 
