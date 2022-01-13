@@ -96,9 +96,31 @@ figcaption
 {
 }
 
+div
+{
+	padding: 1em;
+}
+
+.box
+{
+	border: thin solid;
+}
+
 /* for grades. Making use of old classes present in html */
 
 .centered
 {
 	text-align: center;
+}
+
+rect
+{
+	fill: rgb(0,0,255);
+}
+
+textarea
+{
+	width:400px;
+	height:200px;
+	box-sizing:inherit;
 }

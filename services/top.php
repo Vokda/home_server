@@ -10,7 +10,8 @@ require "$root/utils/buttoner.php";
 <?php
 	$buttons = array(
 		make_button('Name Generator', 'name_gen/name_settings.php', false),
-		make_button('Item Generator', 'name_gen/item_settings.php', false)
+		make_button('Item Generator', 'name_gen/item_settings.php', false),
+		make_button('ANN', 'ann/ann.cgi', false)
 	);
 	
 	make_button_list($buttons);
