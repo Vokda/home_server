@@ -1,0 +1,140 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+*
+{
+	background-color: black;
+	color: #28dd18;
+	font-family:courier;
+	list-style-type: square;
+	font-size: medium;
+	border-color: #28dd18;
+}
+
+fieldset
+{
+	border-color: #28dd18;
+}
+
+h1
+{
+	font-size: x-large;
+}
+
+button
+{
+	border: 0.1em solid #28dd18;
+	box-shadow: 0.1em 0.1em #999;
+	border-style: none none none solid;
+	color: #28dd18;
+	padding: 0.5em;
+	margin-bottom: 0.2em;
+	margin: 0.3em;
+}
+
+button:hover
+{
+	background: #646464;
+}
+
+button:active
+{
+	box-shadow: 0.1em 0.1em #666;
+}
+
+ul
+{
+	padding: 0.5em;
+}
+
+/* general table related */
+
+table
+{
+	border-collapse: collapse;
+	border: thin solid;
+}
+
+tr, td, th
+{
+	border-bottom: thin solid;
+}
+
+th
+{
+	border-top: thin solid;
+}
+
+/* general table related END */
+
+.dir
+{
+	border-top: 1px solid;
+	padding-right: 0.3em;
+	border-style: ridge;
+}
+
+.content
+{
+	display: none;
+}
+
+figure
+{
+	position: relative;
+	float: right;
+	border: thin solid;
+	text-align: center;
+}
+
+figure img
+{
+	display: block;
+	background: grey;
+}
+
+figcaption
+{
+}
+
+div
+{
+	padding: 1em;
+}
+
+.box
+{
+	border: thin solid;
+}
+
+/* for grades. Making use of old classes present in html */
+
+.centered
+{
+	text-align: center;
+}
+
+rect
+{
+	fill: rgb(0,0,255);
+}
+
+textarea
+{
+	width:400px;
+	height:200px;
+	box-sizing:inherit;
+}
+
