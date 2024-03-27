@@ -9,7 +9,7 @@ gem "rails", "~> 7.1.3", ">= 7.1.3.2"
 gem "sprockets-rails"
 
 # Use sqlite3 as the database for Active Record
-gem "sqlite3", "~> 1.4"
+gem "sqlite3", "~> 1.4", force_ruby_platform: true
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem "puma", ">= 5.0"
@@ -66,4 +66,9 @@ group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
   gem "capybara"
   gem "selenium-webdriver"
+end
+
+# this is specifically for raspberry pi B+ since precompile packages does not support the hw
+group :production do
+  gem 'nokogiri', '>= 1.16.2', force_ruby_platform: true
 end
