@@ -2,3 +2,8 @@ writings/
 pics/
 access
 vars.yaml
+/config/master.key
+/config/credentials.yml.enc
+/log/*
+/storage/*
+/tmp/*
