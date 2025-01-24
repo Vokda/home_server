@@ -18,4 +18,7 @@ Rails.application.routes.draw do
   get '/software/perl' => 'software#perl'
   get '/software/sdl' => 'software#sdl'
   get '/software/vim' => 'software#vim'
+
+  # blog
+  get '/blog' => 'blog#index'
 end
