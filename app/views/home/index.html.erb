@@ -1,9 +1,16 @@
 <div>
-  <img src="asdf" alt="[At some point there will be a neat profile picture here. Until then I'll leave my face your imagination.]">
+  <% if params[:fun_mode] %>
+    <div>
+      <figure>
+        <%= image_tag random_pfp_image, alt: "[At some point there will be a neat profile picture here. Until then I'll leave my face your imagination.]" %>
+        <figcaption>A placeholder until I get a proper professional profile picture.</figcaption>
+      </figure>
+    </div>
+  <% end %>
   <p>
     Welcome to my website! My name is Daniel. I'm <%= Time.now.year - 1990 %> years old living in Lund in the south of Sweden. 
     I'm a programmer an avid Linux user and a big fan of games whether they run on a motherboard or a regular board. 
-    I'm also part-owner of lsjbot where I'm available for consulting. My CV can be found <%= link_to 'here', '/CV.pdf' %>.
+    I'm also part-owner of lsjbot where I'm available for consulting. My CV can be found <%= link_to 'here', '/CV.pdf', class: 'miami_text' %>.
   </p>
 </div>
 <hr>
