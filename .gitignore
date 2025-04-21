@@ -38,4 +38,3 @@
 
 # dont need the pile's contents
 publc/the_pile/*
-!public/the_pile/.keep
