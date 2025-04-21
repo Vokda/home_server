@@ -10,4 +10,8 @@ class HomeController < ApplicationController
   def grades
     @page_title = 'education'
   end
+
+  def the_pile
+    @page_title = 'the_pile'
+  end
 end

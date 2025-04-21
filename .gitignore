@@ -35,3 +35,6 @@
 /config/master.key
 
 /config/credentials/production.key
+
+# dont need the pile's contents
+publc/the_pile/*

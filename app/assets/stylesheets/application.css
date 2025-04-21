@@ -118,8 +118,8 @@ figure img
 img
 {
     align:middle;
-    max-width:640px;
-    max-height:400px;
+    max-width:800px;
+    max-height:600px;
 }
 
 figcaption
@@ -129,6 +129,8 @@ figcaption
 div
 {
 	padding: 1em;
+    width: 100%;
+    height: 100%;
 }
 
 .box
