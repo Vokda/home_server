@@ -21,6 +21,13 @@
 	list-style-type: square;
 	font-size: medium;
 	border-color: #28dd18;
+    cursor: url('assets/cursor.png'), default;
+}
+
+@keyframes color_change
+{
+    100% { color: darkgreen; }
+    100% { background: white; }
 }
 
 fieldset
@@ -47,6 +54,8 @@ button
 button:hover
 {
 	background: #646464;
+    animation: color_change 1s infinite;
+    animation-direction: alternate;
 }
 
 button:active
@@ -93,16 +102,24 @@ th
 
 figure
 {
-	position: relative;
+	/*position: relative;
 	float: right;
 	border: thin solid;
-	text-align: center;
+	text-align: center;*/
 }
 
 figure img
 {
 	display: block;
 	background: grey;
+    align:middle;
+}
+
+img
+{
+    align:middle;
+    max-width:640px;
+    max-height:400px;
 }
 
 figcaption
@@ -137,4 +154,3 @@ textarea
 	height:200px;
 	box-sizing:inherit;
 }
-

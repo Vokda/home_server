@@ -10,4 +10,10 @@ module ApplicationHelper
     end
     return button.html_safe
   end
+
+  def random_pfp_image
+      images = Dir.glob(Rails.root.join('app/assets/images/pfps/*'))
+      image_path = images.sample
+      image_path.sub("#{Rails.root}/app/assets/images/", '')
+  end
 end
