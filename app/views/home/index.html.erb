@@ -10,7 +10,7 @@
 <div>
   <ul>
     <!-- do this in a better way later v -->
-    <% ['about me', 'software', 'education'].each do |label| %>
+    <% ['about_me', 'software', 'education', 'the_pile'].each do |label| %>
     <li>
       <%= generate_button(label, "/#{label.parameterize}", false) %>
     </li>

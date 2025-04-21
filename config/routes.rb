@@ -20,5 +20,5 @@ Rails.application.routes.draw do
   get '/software/vim' => 'software#vim'
 
   # blog
-  get '/blog' => 'blog#index'
+  get '/the_pile' => 'pile#index'
 end
