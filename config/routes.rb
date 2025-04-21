@@ -21,4 +21,5 @@ Rails.application.routes.draw do
 
   # blog
   get '/the_pile' => 'pile#index'
+  get '/the_pile/peek' => 'pile#peek'
 end

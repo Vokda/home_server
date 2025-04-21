@@ -1,0 +1,30 @@
+<div>
+  <%= generate_button('Peek on another', "/the_pile/peek", false) %>
+</div>
+<div>
+  <% if @file %>
+    <% case @file[:type] %>
+    <% when 'image' %>
+      <%= image_tag "/the_pile/#{@file[:name]}", alt: @file[:name] %>
+    <% when 'text' %>
+      <p><%= raw File.read(@file[:path]) %></p>
+    <% when 'application' %>
+      <%case @file[:sub_type] %>
+      <% when 'pdf' %>
+        <iframe 
+            src="<%= @file[:name] %>"
+            style='width: 100%; height: 100%; min-height: 600px; max-width: 90%'
+          ></iframe>
+      <%else%>
+        <p>application type not recognized: <%=@file[:sub_type]=%> </p>
+      <%end%>
+    <%else%>
+      <p> MIME TYPE: <%=@file[:type]=%>/<%=@file[:sub_type]=%></p>
+      <p> RAW DATA </p>
+      <p><%= File.read(@file[:path]) %></p>
+    <%end%>
+  <% else %>
+    <% @file[:name] %>
+    <p>NULL</p>
+  <% end %>
+</div>
