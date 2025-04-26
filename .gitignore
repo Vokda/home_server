@@ -30,6 +30,7 @@
 !/tmp/storage/.keep
 
 /public/assets
+/public/CV.pdf
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
@@ -37,4 +38,4 @@
 /config/credentials/production.key
 
 # dont need the pile's contents
-publc/the_pile/*
+publc/the_pile
