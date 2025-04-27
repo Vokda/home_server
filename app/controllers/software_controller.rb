@@ -1,22 +1,22 @@
 class SoftwareController < ApplicationController
-  $root_name = 'software';
+  ROOT_NAME = 'software';
   def index
-    @page_title = $root_name;
+    $page_title = ROOT_NAME;
   end
 
   def linux
-    @page_title = "#$root_name/linux"
+    $page_title = "#{ROOT_NAME}/linux"
   end
 
   def perl
-    @page_title = "#$root_name/perl"
+    $page_title = "#{ROOT_NAME}/perl"
   end
 
   def sdl
-    @page_title = "#$root_name/sdl"
+    $page_title = "#{ROOT_NAME}/sdl"
   end
   
   def vim
-    @page_title = "#$root_name/vim"
+    $page_title = "#{ROOT_NAME}/vim"
   end
 end
