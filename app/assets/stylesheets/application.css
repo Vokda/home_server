@@ -21,7 +21,7 @@
 	list-style-type: square;
 	font-size: medium;
 	border-color: #28dd18;
-    cursor: url('assets/cursor.png'), default;
+    cursor: url('assets/images/cursor.png'), default;
 }
 
 @keyframes color_change

@@ -39,3 +39,6 @@
 
 # dont need the pile's contents
 public/the_pile
+
+# nohup is used by prod
+log/nohup.out
