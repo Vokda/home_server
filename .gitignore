@@ -42,3 +42,5 @@ public/the_pile
 
 # nohup is used by prod
 log/nohup.out
+
+vendor/bundle/
