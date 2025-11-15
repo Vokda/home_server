@@ -19,9 +19,19 @@
         <p>application type not recognized: <%=@file[:sub_type]=%> </p>
       <%end%>
     <%else%>
-      <p> MIME TYPE: <%=@file[:type]=%>/<%=@file[:sub_type]=%></p>
-      <p> RAW DATA </p>
-      <p><%= File.read(@file[:path]) %></p>
+      <% if File.extname(@file[:name]).eql? '.erb' =%>
+        <%= 
+          file_content = File.read(@file[:path]) 
+          erb = ERB.new(file_content)
+          rendered_content = erb.result(binding)
+          raw rendered_content
+        %>
+      Processing <%= @file[:name] %>
+      <%else%>
+        <p> MIME TYPE: <%=@file[:type]=%>/<%=@file[:sub_type]=%></p>
+        <p> RAW DATA </p>
+        <p><%= File.read(@file[:path]) %></p>
+      <% end%>
     <%end%>
   <% else %>
     <% @file[:name] %>
