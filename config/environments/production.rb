@@ -88,6 +88,7 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.hosts.clear
+  config.hosts << /.devdaniel.eu\z/
 
    # turn off warning about sqlite3. Change if data intensive app
    config.active_record.sqlite3_production_warning = false
