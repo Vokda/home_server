@@ -1,0 +1,16 @@
+<h1><%= @page_title %></h1>
+
+<% if @posts.empty? %>
+  <p>No blog posts found in <code>public/blog_posts/</code>.</p>
+<% else %>
+  <ul>
+    <% @posts.each do |post| %>
+      <li>
+        <% name = post[:name] %>
+        <% ts = Time.at(post[:ts]) %>
+        <strong><%= ts.utc.strftime('%Y-%m-%d %H:%M:%S UTC') %></strong>
+  - <%= link_to name, blog_post_path(name: name) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
