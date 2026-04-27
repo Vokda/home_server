@@ -1,0 +1,2 @@
+home server setup on 
+b8:27:eb:a0:8f:58; 192.168.10.182
