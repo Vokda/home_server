@@ -22,6 +22,7 @@ class BlogController < ApplicationController
       end
       # sort by timestamp desc (latest first)
       @posts = mapped.sort_by { |h| -h[:ts] }
+      @latest_post = @posts.first
     else
       @posts = []
     end
@@ -54,7 +55,7 @@ class BlogController < ApplicationController
 
     # translate numeric timestamp in filename to human-readable date 
     date = Time.at(base_name.to_i).strftime('%Y-%m-%d')
-    @blog_title = "Daniel's blog, earth Date #{date}..."
+    @blog_title = "Daniel's blog, earth date #{date}..."
     
 
     if path_string.end_with?('.erb') || ['.html', '.htm'].include?(ext)
