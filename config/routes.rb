@@ -9,8 +9,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   get '/' => 'home#index'
-  get '/about_me' => 'home#about-me'
+  get '/about_me' => 'home#about_me'
   get '/education' => 'home#education'
+  # contact page
+  get '/contact' => 'home#contact'
 
   # software
   get '/software' => 'software#index'
