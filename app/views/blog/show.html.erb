@@ -1,0 +1,5 @@
+<h1><%= @blog_title %></h1>
+
+<div class="blog-post">
+    <%= raw(File.read(@blog_file_path)) %>
+</div>

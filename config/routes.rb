@@ -22,4 +22,11 @@ Rails.application.routes.draw do
   # blog
   get '/the_pile' => 'pile#index'
   get '/the_pile/peek' => 'pile#peek'
+  # blog posts listing and view
+  get '/blog' => 'blog#index', as: :blog
+  # disable automatic :format parsing so dots (file extensions) are kept in the wildcard
+  get '/blog/*name' => 'blog#show', as: :blog_post, format: false
+  # styled 404
+  match '/404', to: 'errors#not_found', via: :all
+  match '/500', to: 'errors#internal_server_error', via: :all
 end

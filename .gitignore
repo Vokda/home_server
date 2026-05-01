@@ -44,3 +44,5 @@ public/the_pile
 log/nohup.out
 
 vendor/bundle/
+# dont need the blogs contents
+public/blog_posts/*
