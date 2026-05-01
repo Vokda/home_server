@@ -1,5 +1,5 @@
 module ApplicationHelper
-  def generate_button(name, href, new_tab)
+  def generate_button(name, href, new_tab = false)
     if(new_tab)
       button = 
         "<a href='#{href}' target='_blank'>

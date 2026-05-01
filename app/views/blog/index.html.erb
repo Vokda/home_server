@@ -1,19 +1,23 @@
-<h1><%= @page_title %></h1>
-
-<% if @posts.empty? %>
-  <p>No blog posts found in <code>public/blog_posts/</code>.</p>
-<% else %>
-  <div>
-  <strong><%= link_to 'Latest Post', blog_post_path(name: @latest_post[:name]) %></strong>
-  <ul>
-    <% @posts.each do |post| %>
-      <li>
-        <% name = post[:name] %>
-        <% ts = Time.at(post[:ts]) %>
-        <strong><%= ts.utc.strftime('%Y-%m-%d %H:%M:%S UTC') %></strong>
-  - <%= link_to name, blog_post_path(name: name) %>
-      </li>
-    <% end %>
-  </ul>
-  </div>
-<% end %>
+<div>
+  This is my personal blog. Occasionally I will post here.
+  <% if @posts.empty? %>
+    <p>No blog posts found in <code>public/blog_posts/</code>.</p>
+  <% else %>
+    <div>
+      <% ts = Time.at(@latest_post[:ts]) %>
+      <%= generate_button("Latest Post (#{ts.utc.strftime('%Y-%m-%d')})", blog_post_path(name: @latest_post[:name])) %>
+    </div>
+    <div>
+      <h2>All Posts</h2>
+      <ul>
+        <% @posts.each do |post| %>
+          <li>
+            <% name = post[:name] %>
+            <% ts = Time.at(post[:ts]) %>
+            <%= generate_button(ts.utc.strftime('%Y-%m-%d'), blog_post_path(name: name)) %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
