@@ -156,3 +156,12 @@ textarea
 	height:200px;
 	box-sizing:inherit;
 }
+
+/* blog related */
+.blog-post {
+	width: 80%;
+	white-space: normal;
+	overflow-wrap: anywhere;
+	word-wrap: break-word;
+	word-break: break-word;
+}
